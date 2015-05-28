@@ -19,6 +19,8 @@ public class tester {
 		accounts.add(coAccount);
 		accounts.add(sAccount);
 		}
+		
+		System.out.println(accounts.get(5).getAccountType());
+		System.out.println(accounts.get(5).creditLimit);
 	}
-
 }

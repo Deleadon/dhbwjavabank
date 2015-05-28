@@ -11,7 +11,7 @@ public abstract class Account {
 	protected int accountType;
 	protected boolean isAuthenticated;
 	protected double interestRate;
-	ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+	protected ArrayList<Transaction> transactions = new ArrayList<Transaction>();
 	
 	public void openAccount(UUID customerId,String pw) {
 		Authentication auth = new Authentication();
@@ -79,5 +79,8 @@ public abstract class Account {
 			System.out.println("not authenticated for getting Balance");
 			return 0;
 		}
+	}
+	public ArrayList<Transaction> getTransactions () {
+		return this.transactions;
 	}
 }
